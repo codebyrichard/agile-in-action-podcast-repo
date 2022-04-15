@@ -9,11 +9,8 @@ on:
 jobs:
     run python script to tweet:
         runs-on: ubuntu-latest
-#        steps:
-#            #-name: pull and run alpine image
-#            run: docker run -it alpine:3
-            #-name: install python
-#            run: apk add python3
-#            -name: install script dependencies
-#            run: |
-                #TO COME
+        steps:
+           -name: pull and run alpine image
+           run: docker run -it alpine:3
+            -name: install python
+            run: apk add python3  
