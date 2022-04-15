@@ -10,7 +10,7 @@ jobs:
     run python script to tweet:
         runs-on: ubuntu-latest
         steps:
-           -name: pull and run alpine image
-           run: docker run -it alpine:3
-           -name: install python
-           run: apk add python3  
+           -name: pull and run alpine image and install python
+           run: |
+            docker run -it alpine:3
+            run: apk add python3  
