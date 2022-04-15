@@ -1,0 +1,22 @@
+name: tweet from json
+#reads json file and parses them into tweets to be sent to twitter
+
+on: 
+#	schedule:
+#        - cron:  '00 17 * * *' # triggers workflow every day at 10 am
+    workflow_dispatch: # allows for manual trigger
+        
+jobs:
+    run python script to tweet:
+        runs-on: ubuntu-latest
+        steps:
+        
+            -name: pull and run alpine image
+            run: docker run -it alpine:3
+            
+            -name: install python
+            run: apk add python3
+            
+#            -name: install script dependencies
+#            run: |
+                #TO COME
