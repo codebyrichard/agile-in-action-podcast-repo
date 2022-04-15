@@ -12,5 +12,5 @@ jobs:
         steps:
            -name: pull and run alpine image
            run: docker run -it alpine:3
-            -name: inst py
-            run: apk add python3  
+           -name: install python
+           run: apk add python3  
