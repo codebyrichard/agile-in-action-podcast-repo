@@ -16,5 +16,5 @@ jobs:
               run: apk add python3
             -name: sample pwd and ls
               run: |
-                    pwd
-                    ls
+                  pwd
+                  ls
