@@ -7,7 +7,7 @@ on:
     workflow_dispatch: # allows for manual trigger
         
 jobs:
-    run python script to tweet:
+    run_python_script_to_tweet:
         runs-on: ubuntu-latest
         steps:
             - name: pull and run alpine image
