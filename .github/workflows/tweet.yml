@@ -14,7 +14,7 @@ jobs:
               run: docker run -it alpine:3
             - name: install python
               run: apk add python3
-            -name: sample pwd and ls
+            - name: sample pwd and ls
               run: |
                   pwd
                   ls
