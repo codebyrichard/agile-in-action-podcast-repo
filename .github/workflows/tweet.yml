@@ -13,11 +13,11 @@ jobs:
             - uses: actions/checkout@master
               with:
                 ref: main
-          #  - name: pull and run alpine image
-           #   run: sudo docker run -it alpine:3
-            #- name: install python
-             # run: apk add python3
-            - name: sample pwd and ls
+            - name: set up docker, alpine and python
               run: |
-                pwd
-                ls
+                sudo apt-get remove docker docker-engine docker.io
+                sudo apt-get update
+                sudo apt install docker.io
+                sudo snap install docker
+                sudo docker run -it alpine:3
+                apk add python3
