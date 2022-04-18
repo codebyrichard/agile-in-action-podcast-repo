@@ -10,6 +10,9 @@ jobs:
     run_python_script_to_tweet:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@master
+              with:
+                ref: main
             - name: pull and run alpine image
               run: docker run -it alpine:3
             - name: install python
