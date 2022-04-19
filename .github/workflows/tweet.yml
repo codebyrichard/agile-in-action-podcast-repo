@@ -13,11 +13,6 @@ jobs:
             - uses: actions/checkout@master
               with:
                 ref: main
-            - name: set up docker, alpine and python
-              run: |
-                sudo apt-get remove docker docker-engine docker.io
-                sudo apt-get update
-                sudo apt install docker.io
-                sudo snap install docker
-                sudo docker run -it alpine:3
-                apk add python3
+            - uses: ./tweet-from-json
+              env:
+                GITHUB_TOKEN: ${{ secrets.TWITTER_API }}
