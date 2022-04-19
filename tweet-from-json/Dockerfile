@@ -1,4 +1,4 @@
-FROM cicirello/pyaction-lite:latest
+FROM alpine:3
 COPY . /
-RUN ls
+RUN apk add python3
 CMD ["python", "script.py"]
