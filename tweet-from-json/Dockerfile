@@ -11,6 +11,6 @@ ENV env_twitter_consumer_secret_key=${twitter_consumer_secret_key}
 
 COPY . /
 RUN apk add python3
-RUN python3 -m pip3 install --upgrade pip3
+RUN apk add py3-pip
 RUN pip3 install tweepy
 RUN python3 script.py
