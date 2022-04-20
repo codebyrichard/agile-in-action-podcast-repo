@@ -7,4 +7,5 @@ RUN apk add py3-pip
 RUN pip3 install tweepy
 ADD script.py /github/workspace/
 CMD pwd && ls
-CMD python3 script.py
+#CMD python3 script.py
+ENTRYPOINT ["python3", "script.py"]
