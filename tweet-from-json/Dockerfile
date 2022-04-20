@@ -6,9 +6,4 @@ COPY . /
 RUN apk add python3
 RUN apk add py3-pip
 RUN pip3 install tweepy
-RUN python3 script.py
-
-ADD entrypoint.sh /
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+CMD python3 script.py
