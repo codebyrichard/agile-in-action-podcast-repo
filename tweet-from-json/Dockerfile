@@ -9,6 +9,8 @@ ENV env_twitter_consumer_key=${twitter_consumer_key}
 ARG twitter_consumer_secret_key=""
 ENV env_twitter_consumer_secret_key=${twitter_consumer_secret_key}
 
+ENV test_var=${TEST_VAR}
+
 COPY . /
 RUN apk add python3
 RUN apk add py3-pip
