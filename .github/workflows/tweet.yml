@@ -1,10 +1,10 @@
 name: tweet from json
 reads json file and parses them into tweets to be sent to twitter
 
-on: 
-	schedule:
-        - cron: '00 17 * * *' # triggers workflow every day at 10 am
-    workflow_dispatch: # allows for manual trigger
+on:
+  schedule:
+    - cron: '00 17 * * *' # triggers workflow every day at 10 am
+  workflow_dispatch: # allows for manual trigger
         
 jobs:
     run_python_script_to_tweet:
